@@ -1,0 +1,93 @@
+[
+  {
+    "Title": "Album 1",
+    "Type": "CD",
+    "Duration": "01:00:00",
+    "Tracks": [
+      {
+        "Title": "Track 1",
+        "Duration": "00:03:30",
+        "Performers": [
+          "Performer 1",
+          "Performer 2"
+        ],
+        "Composer": "Composer 1",
+        "TrackNumber": 1
+      },
+      {
+        "Title": "Track 2",
+        "Duration": "00:04:00",
+        "Performers": [
+          "Performer 1",
+          "Performer 3"
+        ],
+        "Composer": "Composer 2",
+        "TrackNumber": 2
+      }
+    ],
+    "Performers": [
+      "Performer 1",
+      "Performer 2",
+      "Performer 3"
+    ],
+    "AlbumId": 1
+  },
+  {
+    "Title": "Album 2",
+    "Type": "DVD",
+    "Duration": "01:20:00",
+    "Tracks": [
+      {
+        "Title": "Track 1",
+        "Duration": "00:05:00",
+        "Performers": [
+          "Performer 4"
+        ],
+        "Composer": "Composer 3",
+        "TrackNumber": 1
+      },
+      {
+        "Title": "Track 2",
+        "Duration": "00:06:30",
+        "Performers": [
+          "Performer 4",
+          "Performer 5"
+        ],
+        "Composer": "Composer 4",
+        "TrackNumber": 2
+      }
+    ],
+    "Performers": [
+      "Performer 4",
+      "Performer 5"
+    ],
+    "AlbumId": 2
+  },
+  {
+    "Title": "Test123",
+    "Type": "CD",
+    "Duration": "02:30:12",
+    "Tracks": [
+      {
+        "Title": "Lato",
+        "Duration": "00:03:30",
+        "Performers": [
+          "tak"
+        ],
+        "Composer": "Ja",
+        "TrackNumber": 1
+      },
+      {
+        "Title": "Wiosna",
+        "Duration": "00:02:45",
+        "Performers": [
+          "NadalJa"
+        ],
+        "Composer": "JaAle2",
+        "TrackNumber": 2
+      }
+    ],
+    "Performers": [],
+    "AlbumId": 56
+  }
+]
