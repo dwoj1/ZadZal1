@@ -25,15 +25,16 @@ namespace MusicCollectionManager
             return albums.Select(a => a.Title).ToList();
         }
 
-        public Album GetAlbumById(int albumId)
+        public Album? GetAlbumById(int albumId)
         {
             return albums.FirstOrDefault(a => a.AlbumId == albumId);
         }
 
-        public Track GetTrackById(int albumId, int trackNumber)
+        public Track? GetTrackById(int albumId, int trackNumber)
         {
             var album = GetAlbumById(albumId);
-            return album?.Tracks.FirstOrDefault(t => t.TrackNumber == trackNumber);
+            var tracks = album?.Tracks ?? Enumerable.Empty<Track>();
+            return tracks.FirstOrDefault(t => t.TrackNumber == trackNumber);
         }
 
         public void SaveToFile(string filePath)
