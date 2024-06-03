@@ -28,3 +28,4 @@ C:\Users\jack_\source\repos\MusicDB\MusicDB\obj\Debug\net8.0\refint\MusicDB.dll
 C:\Users\jack_\source\repos\MusicDB\MusicDB\obj\Debug\net8.0\MusicDB.pdb
 C:\Users\jack_\source\repos\MusicDB\MusicDB\obj\Debug\net8.0\MusicDB.genruntimeconfig.cache
 C:\Users\jack_\source\repos\MusicDB\MusicDB\obj\Debug\net8.0\ref\MusicDB.dll
+C:\Users\jack_\source\repos\MusicDB\MusicDB\obj\Debug\net8.0\MusicDB.sourcelink.json

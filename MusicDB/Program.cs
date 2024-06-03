@@ -68,13 +68,7 @@ namespace MusicCollectionManager
             Console.Write("Podaj numer płyty (ID): ");
             int albumId = int.Parse(Console.ReadLine());
 
-            Album album = new Album
-            {
-                Title = title,
-                Type = type,
-                Duration = duration,
-                AlbumId = albumId
-            };
+            Album album = new Album(title, type, duration, new List<Track>(), new List<string>(), albumId);
 
             Console.Write("Podaj liczbę utworów: ");
             int trackCount = int.Parse(Console.ReadLine());
@@ -89,14 +83,7 @@ namespace MusicCollectionManager
                 Console.Write("Kompozytor utworu: ");
                 string composer = Console.ReadLine();
 
-                Track track = new Track
-                {
-                    Title = trackTitle,
-                    Duration = trackDuration,
-                    Composer = composer,
-                    TrackNumber = i,
-                    Performers = new List<string>()
-                };
+                Track track = new Track(trackTitle, trackDuration, new List<string>(), composer, i);
 
                 Console.Write("Podaj liczbę wykonawców utworu: ");
                 int performerCount = int.Parse(Console.ReadLine());
@@ -137,17 +124,23 @@ namespace MusicCollectionManager
             int albumId = int.Parse(Console.ReadLine());
             var album = musicCollection.GetAlbumById(albumId);
 
-            if (album == null)
+            if (!album.HasValue)
             {
                 Console.WriteLine("Nie znaleziono płyty o podanym ID.");
                 return;
             }
 
-            Console.WriteLine($"Tytuł płyty: {album.Title}");
-            Console.WriteLine($"Typ płyty: {album.Type}");
-            Console.WriteLine($"Czas trwania: {album.Duration}");
+            if (album.Value.IsDefault())
+            {
+                Console.WriteLine("Nie znaleziono płyty o podanym ID.");
+                return;
+            }
+
+            Console.WriteLine($"Tytuł płyty: {album?.Title}");
+            Console.WriteLine($"Typ płyty: {album?.Type}");
+            Console.WriteLine($"Czas trwania: {album?.Duration}");
             Console.WriteLine("Utwory:");
-            foreach (var track in album.Tracks)
+            foreach (var track in album?.Tracks)
             {
                 Console.WriteLine($"{track.TrackNumber}. {track.Title}");
             }
@@ -162,17 +155,23 @@ namespace MusicCollectionManager
 
             var track = musicCollection.GetTrackById(albumId, trackNumber);
 
-            if (track == null)
+            if (!track.HasValue)
             {
                 Console.WriteLine("Nie znaleziono utworu o podanym numerze.");
                 return;
             }
 
-            Console.WriteLine($"Tytuł utworu: {track.Title}");
-            Console.WriteLine($"Czas trwania: {track.Duration}");
-            Console.WriteLine($"Kompozytor: {track.Composer}");
+            if (track.Value.IsDefault())
+            {
+                Console.WriteLine("Nie znaleziono utworu o podanym numerze.");
+                return;
+            }
+
+            Console.WriteLine($"Tytuł utworu: {track?.Title}");
+            Console.WriteLine($"Czas trwania: {track?.Duration}");
+            Console.WriteLine($"Kompozytor: {track?.Composer}");
             Console.WriteLine("Wykonawcy:");
-            foreach (var performer in track.Performers)
+            foreach (var performer in track?.Performers)
             {
                 Console.WriteLine($"- {performer}");
             }

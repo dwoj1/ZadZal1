@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jack_\\source\\repos\\MusicDB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\track.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\track.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\musiccollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\musiccollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\track.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\track.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|c:\\users\\jack_\\source\\repos\\musicdb\\musicdb\\musiccollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B712B5E0-977C-4952-B036-9FD67A6BF295}|MusicDB\\MusicDB.csproj|solutionrelative:musicdb\\musiccollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Track.cs",
               "DocumentMoniker": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\Track.cs",
               "RelativeDocumentMoniker": "MusicDB\\Track.cs",
               "ToolTip": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\Track.cs",
               "RelativeToolTip": "MusicDB\\Track.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T15:14:12.196Z",
               "EditorCaption": ""
@@ -49,33 +49,33 @@
               "RelativeDocumentMoniker": "MusicDB\\Album.cs",
               "ToolTip": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\Album.cs",
               "RelativeToolTip": "MusicDB\\Album.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T15:14:12.199Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MusicCollection.cs",
               "DocumentMoniker": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\MusicCollection.cs",
               "RelativeDocumentMoniker": "MusicDB\\MusicCollection.cs",
               "ToolTip": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\MusicCollection.cs",
               "RelativeToolTip": "MusicDB\\MusicCollection.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwDUAAAA3AAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCQAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T15:14:12.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\Program.cs",
               "RelativeDocumentMoniker": "MusicDB\\Program.cs",
               "ToolTip": "C:\\Users\\jack_\\source\\repos\\MusicDB\\MusicDB\\Program.cs",
               "RelativeToolTip": "MusicDB\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAC8AAAA0AAAA",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAwwIgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T15:14:12.205Z",
               "EditorCaption": ""
