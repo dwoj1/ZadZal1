@@ -8,29 +8,54 @@
         "Title": "Track 1",
         "Duration": "00:03:30",
         "Performers": [
-          "Performer 1",
-          "Performer 2"
+          { "name": "Performer 1" },
+          { "name": "Performer 2" }
         ],
-        "Composer": "Composer 1",
+        "Composer": { "name": "Composer 1" },
         "TrackNumber": 1
       },
       {
         "Title": "Track 2",
         "Duration": "00:04:00",
         "Performers": [
-          "Performer 1",
-          "Performer 3"
+          { "name": "Performer 3" },
+          { "name": "Performer 4" }
         ],
-        "Composer": "Composer 2",
+        "Composer": { "name": "Composer 2" },
         "TrackNumber": 2
       }
     ],
     "Performers": [
-      "Performer 1",
-      "Performer 2",
-      "Performer 3"
+      { "name": "Performer 2" },
+      { "name": "Performer 3" }
     ],
-    "AlbumId": 1
+    "AlbumId": 1,
+    "Remixes": [
+      {
+        "Title": "Track 1",
+        "Duration": "00:03:30",
+        "Performers": [
+          { "name": "Performer 1" },
+          { "name": "Performer 2" }
+        ],
+        "Composer": { "name": "Composer 1" },
+        "TrackNumber": 1,
+        "RemixTitle": "Remix 2",
+        "Remixer": { "name": "Remixer 1" }
+      },
+      {
+        "Title": "Track 2",
+        "Duration": "00:04:00",
+        "Performers": [
+          { "name": "Performer 3" },
+          { "name": "Performer 4" }
+        ],
+        "Composer": { "name": "Composer 2" },
+        "TrackNumber": 2,
+        "RemixTitle": "Remix 2",
+        "Remixer": { "name": "Remixer 2" }
+      }
+    ]
   },
   {
     "Title": "Album 2",
@@ -41,26 +66,40 @@
         "Title": "Track 1",
         "Duration": "00:05:00",
         "Performers": [
-          "Performer 4"
+          { "name": "Performer 4" }
         ],
-        "Composer": "Composer 3",
+        "Composer": { "name": "Composer 2" },
         "TrackNumber": 1
       },
       {
         "Title": "Track 2",
         "Duration": "00:06:30",
         "Performers": [
-          "Performer 4",
-          "Performer 5"
+          { "name": "Performer 4" },
+          { "name": "Performer 5" }
         ],
-        "Composer": "Composer 4",
+        "Composer": { "name": "Composer 3" },
         "TrackNumber": 2
       }
     ],
     "Performers": [
-      "Performer 4",
-      "Performer 5"
+      { "name": "Performer 4" },
+      { "name": "Performer 5" }
     ],
-    "AlbumId": 2
+    "AlbumId": 2,
+    "Remixes": [
+      {
+        "Title": "Track 2",
+        "Duration": "00:04:00",
+        "Performers": [
+          { "name": "Performer 3" },
+          { "name": "Performer 4" }
+        ],
+        "Composer": { "name": "Composer 2" },
+        "TrackNumber": 2,
+        "RemixTitle": "Remix 1",
+        "Remixer": { "name": "Remixer 1" }
+      }
+    ]
   }
 ]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusicDB;
+using System;
 
 namespace MusicCollectionManager
 {
@@ -68,7 +69,7 @@ namespace MusicCollectionManager
             Console.Write("Podaj numer płyty (ID): ");
             int albumId = int.Parse(Console.ReadLine());
 
-            Album album = new Album(title, type, duration, new List<Track>(), new List<string>(), albumId);
+            Album album = new Album(title, type, duration, new List<Track>(), new List<Author>(), albumId);
 
             Console.Write("Podaj liczbę utworów: ");
             int trackCount = int.Parse(Console.ReadLine());
@@ -83,7 +84,7 @@ namespace MusicCollectionManager
                 Console.Write("Kompozytor utworu: ");
                 string composer = Console.ReadLine();
 
-                Track track = new Track(trackTitle, trackDuration, new List<string>(), composer, i);
+                Track track = new Track(trackTitle, trackDuration, new List<Author>(), new Author(composer), i);
 
                 Console.Write("Podaj liczbę wykonawców utworu: ");
                 int performerCount = int.Parse(Console.ReadLine());
@@ -92,10 +93,42 @@ namespace MusicCollectionManager
                 {
                     Console.Write($"Wykonawca {j}: ");
                     string performer = Console.ReadLine();
-                    track.Performers.Add(performer);
+                    track.Performers.Add(new Author(performer));
                 }
 
                 album.Tracks.Add(track);
+            }
+
+            Console.Write("Podaj liczbę remixów: ");
+            int remixCount = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= remixCount; i++)
+            {
+                Console.WriteLine($"Remix {i}:");
+                Console.Write("Tytuł remixu: ");
+                string remixTitle = Console.ReadLine();
+                Console.Write("Tytuł oryginalnego utworu: ");
+                string trackTitle = Console.ReadLine();
+                Console.Write("Czas trwania remixu (HH:MM:SS): ");
+                TimeSpan trackDuration = TimeSpan.Parse(Console.ReadLine());
+                Console.Write("Autor remixu: ");
+                string remixer = Console.ReadLine();
+                Console.Write("Kompozytor oryginalnego utworu: ");
+                string composer = Console.ReadLine();
+
+                Remix remix = new Remix(trackTitle, trackDuration, new List<Author>(), new Author(composer), i, new Author(remixer), remixTitle);
+
+                Console.Write("Podaj liczbę wykonawców oryginalnego utworu: ");
+                int performerCount = int.Parse(Console.ReadLine());
+
+                for (int j = 1; j <= performerCount; j++)
+                {
+                    Console.Write($"Wykonawca {j}: ");
+                    string performer = Console.ReadLine();
+                    remix.Performers.Add(new Author(performer));
+                }
+
+                album.Remixes.Add(remix);
             }
 
             musicCollection.AddAlbum(album);
@@ -144,6 +177,11 @@ namespace MusicCollectionManager
             {
                 Console.WriteLine($"{track.TrackNumber}. {track.Title}");
             }
+            Console.WriteLine("Remixy:");
+            foreach (var remix in album?.Remixes)
+            {
+                Console.WriteLine($"{remix.TrackNumber}. {remix.RemixTitle}");
+            }
         }
 
         static void DisplayTrackDetails(MusicCollection musicCollection)
@@ -155,13 +193,7 @@ namespace MusicCollectionManager
 
             var track = musicCollection.GetTrackById(albumId, trackNumber);
 
-            if (!track.HasValue)
-            {
-                Console.WriteLine("Nie znaleziono utworu o podanym numerze.");
-                return;
-            }
-
-            if (track.Value.IsDefault())
+            if (track == null)
             {
                 Console.WriteLine("Nie znaleziono utworu o podanym numerze.");
                 return;
@@ -169,11 +201,11 @@ namespace MusicCollectionManager
 
             Console.WriteLine($"Tytuł utworu: {track?.Title}");
             Console.WriteLine($"Czas trwania: {track?.Duration}");
-            Console.WriteLine($"Kompozytor: {track?.Composer}");
+            Console.WriteLine($"Kompozytor: {track?.Composer.Value.Name}");
             Console.WriteLine("Wykonawcy:");
             foreach (var performer in track?.Performers)
             {
-                Console.WriteLine($"- {performer}");
+                Console.WriteLine($"- {performer.Name}");
             }
         }
     }
